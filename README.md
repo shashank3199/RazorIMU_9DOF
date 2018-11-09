@@ -88,4 +88,4 @@ Let's explore the class now
 - **<font color="#CD00FF">float</font> GetPitch()**: To get the continuous PITCH values.
 - **<font color="#CD00FF">float</font> GetYaw()**: To get the continuous YAW values.
 
-![Developers Tag](https://img.shields.io/badge/Developer-shashank3199-red.svg)
+[![Developers Tag](https://img.shields.io/badge/Developer-shashank3199-red.svg)](https://github.com/shashank3199)
