@@ -8,17 +8,21 @@
 #include "RazorIMU_9DOF.h"
 
 // ################### Constructors #######################
-RazorIMU_9DOF::RazorIMU_9DOF() {
+RazorIMU_9DOF::RazorIMU_9DOF() 
+{
 	// Empty constructor
 }
-RazorIMU_9DOF::RazorIMU_9DOF(Stream *AttachedSerial) {
+
+RazorIMU_9DOF::RazorIMU_9DOF(Stream *AttachedSerial) 
+{
 	// Connect IMU Serial
 	this->AttachIMUSerial(AttachedSerial);
 }
 
 // ############# Member Functions #########################
 // Attach Serial
-void RazorIMU_9DOF::AttachIMUSerial(Stream *AttachedSerial) {
+void RazorIMU_9DOF::AttachIMUSerial(Stream *AttachedSerial) 
+{
 	// Connect IMU Serial
 	this->IMU_Serial = AttachedSerial;
 }
@@ -42,15 +46,20 @@ void RazorIMU_9DOF::UpdateData()
 }
 
 // Getting the values from the Class Object
-float RazorIMU_9DOF::GetPitch() {
+float RazorIMU_9DOF::GetPitch() 
+{
 	// Pitch
 	return this->YPR_values[PITCH];
 }
-float RazorIMU_9DOF::GetRoll() {
+
+float RazorIMU_9DOF::GetRoll() 
+{
 	// Roll
 	return this->YPR_values[ROLL];
 }
-float RazorIMU_9DOF::GetYaw() {
+
+float RazorIMU_9DOF::GetYaw() 
+{
 	// Yaw
 	return this->YPR_values[YAW];
 }

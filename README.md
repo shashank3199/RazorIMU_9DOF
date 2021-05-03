@@ -1,20 +1,40 @@
-![Version tag](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version tag](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
 # Introduction
-This library is for the receiver end of the Razor 9 DOF IMU (reference  [here](https://github.com/Razor-AHRS/razor-9dof-ahrs/tree/master/Arduino/Razor_AHRS)).
+This library is for the receiver end of the Razor 9 DOF IMU (reference [here](https://github.com/Razor-AHRS/razor-9dof-ahrs/tree/master/Arduino/Razor_AHRS)).
+
+# Index
+- [Introduction](#introduction)
+- [Index](#index)
+- [Users Guide](#user-guide)
+    - [Downloading the library](#downloading-the-library)
+    - [Using the library with Arduino](#using-the-library-with-arduino)
+    - [Prerequisites](#prerequisites)
+    - [Usage of the library](#usage-of-the-library)
+  	- [Examples](#examples)
+      - [Get_RPY_values](#get_rpy_values)
+- [Developers Guide](#developers-guide)
+    - [Library Details](#library-details)
+    - [Class contents](#class-contents)
+        - [Private members](#private-members)
+            - [Variables](#variables)
+            - [Member functions](#member-functions)
+        - [Public members](#public-members)
+            - [Constructors](#constructors)
+            - [Member functions](#member-functions-1)
+- [References](#references)
 
 # User guide
 ## Downloading the library
 It is suggested that you download the entire repository and then select this folder, so that you can enjoy the benifits of VCS like git. It makes it simpler to update the contents whenever patch fixes are done. You can simply open a terminal (or gitbash on windows), go to the folder where you want to save this repository and type the following command.
 ```
-git clone https://github.com/shashank3199/RazorIMU_9DOF
+	git clone https://github.com/shashank3199/RazorIMU_9DOF
 ```
-_You might want to omit the `-b <branch>` tag if you're downloading from the master branch_.
 
 **Not recommended**: You can download _only_ this folder by clicking [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/shashank3199/RazorIMU_9DOF)
 
 ## Using the library with Arduino
-Move this folder into the arduino libraries folder on your PC. If you don't know where the libraries folder of your arduino is, you can check out the README file of this entire repository for this, click [here](../README.md).<br>
+Move this folder into the arduino libraries folder on your PC. If you don't know where the libraries folder of your arduino is, you can check out the README file of this entire repository for this, click [here](https://www.arduino.cc/en/hacking/libraries).<br>
 
 ## Prerequisites
 Please follow the following steps before working with this library:
@@ -30,7 +50,7 @@ Please follow the following steps before working with this library:
 - Set baud rate to 57600
 - There must be output
 
-More info about setting up software  [here](https://github.com/Razor-AHRS/razor-9dof-ahrs/wiki/Tutorial#setting-up-the-software).
+More info about setting up software [here](https://github.com/Razor-AHRS/razor-9dof-ahrs/wiki/Tutorial#setting-up-the-software).
 
 ## Usage of the library
 In order to use this library, you must do the following:
@@ -39,6 +59,21 @@ In order to use this library, you must do the following:
 - Initialize the Serial stream on which the IMU is attached using the `AttachIMUSerial` function.
 - To avoid wastage of resources, the library doesn't continuously poll the serial. You must call the function `UpdateData` for the library to fetch the values from the serial.
 - To get the values, you can use one of the getter functions, for example if you want to access the YAW value, then you could use the function:  **GetYaw** which will give you the continuous YAW value.
+
+## Examples
+
+### Get_RPY_values
+This example is to show you how to fetch **YAW**, **PITCH** and **ROLL** values from the IMU using the `RazorIMU_9DOF` library.<br>
+File: [./examples/Get_RPY_values/Get_RPY_values.ino](./examples/Get_RPY_values/Get_RPY_values.ino)<br>
+We simply follow the following steps:
+1. Include library
+2. Create object
+3. Initialize Serials. IMU on **Serial1**. Keep in mind to match the baud rates.
+4. Attach the serial of the IMU
+5. Then start a loop
+    1. Update the data readings from IMU
+    2. Get YAW, PITCH and ROLL values
+6. Re-run the loop 
 
 # Developers Guide
 This library has a single class named `RazorIMU_9DOF`. Let's explore all the contents in detail.
@@ -59,7 +94,7 @@ This file consists the list of keywords and their types to be recognized by the 
 #### README.md
 The description file that you're currently reading. All documentation here.
 
-### Class contents
+# Class contents
 Let's explore the contents of the class, but first, we also have literals defined for general purpose use (using `#define`). They are:
 
 | Name | Value | Purpose |

@@ -8,6 +8,11 @@ RazorIMU_9DOF	KEYWORD1
 ############ Functions ################
 AttachIMUSerial	KEYWORD2
 UpdateData	KEYWORD2
-GetRoll	KEYWORD2
+GetRoll		KEYWORD2
 GetPitch	KEYWORD2
-GetYaw	KEYWORD2
+GetYaw		KEYWORD2
+
+########### Literals ##################
+PITCH 	LITERAL1
+ROLL 	LITERAL1
+YAW 	LITERAL1
