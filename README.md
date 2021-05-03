@@ -1,7 +1,7 @@
 ![Version tag](https://img.shields.io/badge/version-1.0.0-blue.svg)
 
 # Introduction
-This library is for the receiver end of the Razor 9 DOF IMU (reference [here](https://github.com/Razor-AHRS/razor-9dof-ahrs/tree/master/Arduino/Razor_AHRS)).
+This library is for the receiver end of the Razor 9 DOF IMU (reference [here](https://www.sparkfun.com/products/retired/10736).
 
 # Index
 - [Introduction](#introduction)
@@ -16,13 +16,11 @@ This library is for the receiver end of the Razor 9 DOF IMU (reference [here](ht
 - [Developers Guide](#developers-guide)
     - [Library Details](#library-details)
     - [Class contents](#class-contents)
-        - [Private members](#private-members)
+        - [Protected members](#protected-members)
             - [Variables](#variables)
-            - [Member functions](#member-functions)
         - [Public members](#public-members)
             - [Constructors](#constructors)
-            - [Member functions](#member-functions-1)
-- [References](#references)
+            - [Member functions](#member-functions)
 
 # User guide
 ## Downloading the library
